@@ -1,28 +1,13 @@
-#library('hash')
 source('constants.R')
+source('travel.R')
+source('labor.R')
 
-round_trip_cost <- function(distances) {
-  fuel_cost <- 881.88
-  driver_cost <- 5000
-  liter_per_km <- 0.6
-  fuel_cost_per_round_trip <- 2 * distances * fuel_cost * liter_per_km
-  return(fuel_cost_per_round_trip + driver_cost)
-}
+empties <- 2:20
 
-# Specifically if Pivot buys a truck
-total_transport_cost <- function(num_trips) {
-  gitega_nduba_km <- 26
-  round_trip_cost(gitega_nduba_km) * num_trips
-}
+transport <- monthly_transport_cost(empties)
+labor <- labor_cost(empties)
+rent <- rent # duh
 
-monthly_volume <- function(empties) {
-  empty_volume * empties
-}
+total_running_cost <- transport + labor + rent
 
-monthly_trips <- function(empties) {
-  ceiling(monthly_volume(empties) / truck_volume)
-}
-
-monthly_transport_cost <- function(empties) {
-  total_transport_cost(monthly_trips(empties))
-}
+cost_per_household <- total_running_cost / empties

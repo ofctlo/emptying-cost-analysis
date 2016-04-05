@@ -4,6 +4,7 @@
 #
 empty_volume <- 3000 # L
 salary_per_empty <- 25000 # Francs
+required_empties <- 8
 
 truck_capacity <- 6 # tons
 truck_volume <- 6000 # L
@@ -18,16 +19,16 @@ rent <- 40000
 
 truck_cost_francs <- 22728900
 
-protective_equipment_cost_francs <- hash(
-  n95       = 1850,
-  gas_masks = 9950,
-  gloves    = 4950,
-  boots     = 12000,
-  goggles   = 9000,
-  coveralls = 29950,
-  suit      = 100,
-  ppe       = 67800
-)
+#protective_equipment_cost_francs <- hash(
+#  n95       = 1850,
+#  gas_masks = 9950,
+#  gloves    = 4950,
+#  boots     = 12000,
+#  goggles   = 9000,
+#  coveralls = 29950,
+#  suit      = 100,
+#  ppe       = 67800
+#)
 
 gulper_cost_francs <- 113000
 
