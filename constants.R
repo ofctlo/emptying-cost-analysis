@@ -5,6 +5,7 @@
 empty_volume <- 3000 # L
 salary_per_empty <- 25000 # Francs
 required_empties <- 8
+commission <- 5000
 
 truck_capacity <- 6 # tons
 truck_volume <- 6000 # L
