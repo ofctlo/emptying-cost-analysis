@@ -1,27 +1,16 @@
 #Emptying Cost Analysis
 
-##Usage
+Includes functions for calculating the running costs of sludge emptying.
+Currently taken into account are transport, rent (land for transfer station),
+and labor.
 
-###To run from RStudio
+The code is divided by the type of cost it pertains to:
 
-  1. Open the project directory in RStudio.
-  2. Set your working directory to the location of `main.R`
-  3. `source('main.R')`
+  * `constants.R` - holds values being held constant for now
+  * `travel.R` - code for calculating transportation costs.
+  * `labor.R` - calculates the salary and commission paid for a given number of empties
+  * `main.R` - calculates total costs using files above
+  * `plots.R` - creates plots based on the results of `main.R`
 
-###To run from the command line
-
-  1. `cd <PROJECT_LOCATION>`
-  2. `R`
-  3. `source('main.R')`
-
-###Functions
-
-  * `monthly_volume` - for a given number of empties, returns the volume of
-    waste removed
-  * `monthly_trips` - for a given number of empties, returns the number of
-    trips taken
-  * `monthly_transport_cost` - for a given number of empties, returns the total
-    cost of transportation
-
-All of the above functions can be passed numeric vectors of any length and will
-return numeric vectors of the same length.
+Plots have been generated and included for the cost to households and the total
+running costs.
